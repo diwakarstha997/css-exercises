@@ -5,6 +5,9 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  /* display header, content and footer on column flexbox */
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +19,10 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+
+  /* Adds margin and padding on buttons */ 
+  margin-top: 20px;
+  padding: 5px 10px;
 }
 
 input {
@@ -23,4 +30,70 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+
+.header,
+.footer,
+.left-links,
+.right-links {
+  display: flex;
+}
+
+.left-links,
+.right-links {
+
+  /* Remove Unordered list default style*/
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  /* Adds 10px gaps between each list items*/
+  gap: 10px;
+}
+
+.left-links {
+
+  /* Adds on the right side of ul element*/
+  margin-right: auto;
+}
+
+.right-links {
+
+  /* Adds on the left side of ul element*/
+  margin-left: auto;
+}
+
+.header {
+  margin: 15px 5px;
+  padding: 15px 10px;
+  flex-grow: 0; /* Avoid box element from growing */
+}
+
+.content {
+
+  /* Adjust image input and buttons in column */
+  display: flex;
+  flex-direction: column;
+
+  /* Center the content inside*/
+  justify-content: center;
+  align-items: center;
+
+  flex: auto; /* sets flex: 1 1 auto; */
+}
+
+.footer {
+  background-color: #eeeeee;
+  margin: 5px;
+  padding: 15px 10px;
+  flex-grow: 0; /* Avoid box element from growing */
+}
+
+a {
+
+  /* Remove anchor tag decoration */
+  text-decoration: none;
+  
+  color: rgb(94, 92, 92);
 }
